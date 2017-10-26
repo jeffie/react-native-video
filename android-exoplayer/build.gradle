@@ -10,10 +10,19 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+
 dependencies {
     provided 'com.facebook.react:react-native:+'
-    compile 'com.google.android.exoplayer:exoplayer:r2.4.0'
-    compile('com.google.android.exoplayer:extension-okhttp:r2.4.0') {
+    compile 'com.google.android.exoplayer:exoplayer:r2.5.4'
+    compile('com.google.android.exoplayer:extension-okhttp:r2.5.4') {
         exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     }
     compile 'com.squareup.okhttp3:okhttp:3.4.2'

@@ -207,6 +207,11 @@ public final class ExoPlayerView extends FrameLayout {
         }
 
         @Override
+        public void onRepeatModeChanged(int repeatMode) {
+
+        }
+
+        @Override
         public void onPlayerError(ExoPlaybackException e) {
             // Do nothing.
         }

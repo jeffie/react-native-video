@@ -456,6 +456,7 @@ public class ReactVideoView extends ScalableVideoView implements MediaPlayer.OnP
         WritableMap event = Arguments.createMap();
         event.putMap(EVENT_PROP_ERROR, error);
         mEventEmitter.receiveEvent(getId(), Events.EVENT_ERROR.toString(), event);
+        mp.reset();
         return true;
     }
 
